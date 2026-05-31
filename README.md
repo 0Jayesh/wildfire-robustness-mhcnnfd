@@ -1,5 +1,5 @@
 # Wildfire Detection: Robustness-Aware Deep Learning
-**M.Tech Dissertation — VNIT Nagpur | Published at FICTA 2026 (Springer SIST, Scopus)**
+**M.Tech Dissertation — VNIT Nagpur | Accepted at FICTA 2026 (Springer SIST, Scopus)**
 
 ---
 
