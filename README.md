@@ -1,37 +1,40 @@
-# Wildfire Detection: Robustness-Aware Deep Learning
+---
+title: Wildfire Detection
+emoji: 📊
+colorFrom: red
+colorTo: blue
+sdk: gradio
+sdk_version: 6.14.0
+python_version: "3.13"
+app_file: app.py
+pinned: false
+short_description: WildfireDetectionApp
+---
+
+# Wildfire Detection App
+
 **M.Tech Dissertation — VNIT Nagpur | Accepted at FICTA 2026 (Springer SIST, Scopus)**
 
----
-
-## Key Finding
-
-A model achieving **99.80% accuracy on clean images collapsed to 0.1%** under real-world sensor noise. Degradation-inclusive retraining fully recovered performance to **99.94% across all conditions**.
-
-| Condition | Before Retraining | After Retraining |
-|---|---|---|
-| Clean images | 99.80% | 99.96% |
-| Heavy Gaussian Noise | **0.1%** | 99.94% |
-| Light Gaussian Noise | 1.0% | 99.68% |
-| Fog / Smoke (70%) | 25.0% | 100.0% |
-| Motion Blur | 100.0% | 100.0% |
-
-> High benchmark accuracy is not a valid predictor of operational robustness.
-
----
-
-## What's in this Repo
-
-- `phase1_replication/` — MHCNNFD baseline replication on UAVs-FFDB
-- `phase2_benchmarking/` — Cross-dataset evaluation (DeepFire, WILDFIRE-I)
-- `phase3_robustness/` — Mixed dataset, stress testing, robust retraining
-
----
-
-## Publication
-Accepted at **FICTA 2026**, London Metropolitan University (Springer SIST, Scopus indexed).
+A Gradio-based web app for wildfire detection from UAV images using deep learning models trained for robustness under real-world degradations like noise, fog, and blur.
 
 ## Live Demo
-👉 [huggingface.co/spaces/jayeshkumeriya/wildfire-detection](https://huggingface.co/spaces/jayeshkumeriya/wildfire-detection)
+[huggingface.co/spaces/jayeshkumeriya/wildfire-detection](https://huggingface.co/spaces/jayeshkumeriya/wildfire-detection)
+
+## Models
+| Model | Description |
+|---|---|
+| `Model2_Epoch_36_ValAcc_1.0000.keras` | Baseline model, 99.80% accuracy |
+| `Model2_Final_2026_v2.h5` | Final robust model |
+| `model3_ep_17.keras` | Degradation-retrained model, 99.94% accuracy |
+
+## How to Run Locally
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
 ## Author
-**Jayesh Kumeriya** — [LinkedIn](https://linkedin.com/in/jk999) | [jayeshkumeriya999@gmail.com](mailto:jayeshkumeriya999@gmail.com)
+**Jayesh Kumeriya** — [LinkedIn](https://linkedin.com/in/jk999)
+
+## Related Repository
+[wildfire-robustness-mhcnnfd](https://github.com/0Jayesh/wildfire-robustness-mhcnnfd) — Jupyter notebooks & research phases
